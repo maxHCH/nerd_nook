@@ -14,6 +14,22 @@ useHead({
 </template>
 
 <style>
+:root {
+  --jp-bg: #fafafa;
+  --jp-surface: #ffffff;
+  --jp-text: #1a1a1a;
+  --jp-muted: #888888;
+  --jp-border: #e5e5e5;
+}
+
+html.dark {
+  --jp-bg: #1a1a1a;
+  --jp-surface: #242424;
+  --jp-text: #e5e5e5;
+  --jp-muted: #888888;
+  --jp-border: #333333;
+}
+
 html,
 body,
 #__nuxt {
@@ -23,7 +39,7 @@ body,
 }
 
 html.dark {
-  background: #222;
-  color: white;
+  background: var(--jp-bg);
+  color: var(--jp-text);
 }
 </style>

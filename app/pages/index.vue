@@ -1,32 +1,32 @@
 <script setup lang="ts">
-definePageMeta({
-  layout: 'home',
-})
-
 const online = useOnline()
 </script>
 
 <template>
-  <div>
-    <Logos mb-6 />
-    <ClientOnly>
-      <Suspense>
-        <PageView v-if="online" />
-        <div v-else text-gray:80>
-          You're offline
-        </div>
-        <template #fallback>
-          <div italic op50>
-            <span animate-pulse>Loading...</span>
-          </div>
-        </template>
-      </Suspense>
+  <ClientOnly>
+    <Suspense>
+      <PageView v-if="online" />
+      <div v-else class="page">
+        <main class="container-wide">
+          <p class="text-jp-muted">
+            You're offline
+          </p>
+        </main>
+      </div>
       <template #fallback>
-        <div op50>
-          <span animate-pulse>...</span>
+        <div class="page">
+          <main class="container-wide">
+            <span class="animate-pulse text-jp-muted">Loading...</span>
+          </main>
         </div>
       </template>
-    </ClientOnly>
-    <InputEntry />
-  </div>
+    </Suspense>
+    <template #fallback>
+      <div class="page">
+        <main class="container-wide">
+          <span class="animate-pulse text-jp-muted">...</span>
+        </main>
+      </div>
+    </template>
+  </ClientOnly>
 </template>

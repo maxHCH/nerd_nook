@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
     '@nuxt/eslint',
+    '@nuxt/content',
   ],
 
   devtools: {
@@ -38,6 +39,7 @@ export default defineNuxtConfig({
   ],
 
   colorMode: {
+    preference: 'system',
     classSuffix: '',
   },
 
