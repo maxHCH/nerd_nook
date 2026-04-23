@@ -3,21 +3,21 @@ const route = useRoute()
 
 const slug = computed(() => String(route.params.slug ?? ''))
 
-const { data: article } = await useAsyncData(
+const { data: article, pending } = await useAsyncData(
   `posts-${slug.value}`,
   () => queryCollection('posts').path(`/posts/${slug.value}`).first(),
+  { server: false },
 )
 
-if (!article.value) {
-  throw createError({
-    statusCode: 404,
-    statusMessage: 'Article not found',
-  })
-}
-
 useSeoMeta({
-  title: article.value.title,
-  description: article.value.description ?? article.value.title,
+  title: computed(() => article.value?.title ?? 'Nerd Nook'),
+  description: computed(() => article.value?.description ?? article.value?.title ?? ''),
+})
+
+watch(pending, (isPending) => {
+  if (!isPending && !article.value) {
+    throw createError({ statusCode: 404, statusMessage: 'Article not found' })
+  }
 })
 </script>
 
@@ -28,14 +28,19 @@ useSeoMeta({
         ← Back
       </NuxtLink>
 
+      <div v-if="pending || !article" class="mt-12 meta">
+        Loading...
+      </div>
+
+      <template v-else>
       <header class="mb-16 mt-12 md:mb-20 md:mt-16">
         <p class="mb-6 meta">
-          {{ article.date }}
+          {{ formatDate(article.date) }}
           <span v-if="article.tag"> · {{ article.tag }}</span>
         </p>
-        <h1 class="title-xl">
+        <h2 class="title-xl">
           {{ article.title }}
-        </h1>
+        </h2>
         <p v-if="article.description" class="mt-6 text-base text-jp-muted leading-8">
           {{ article.description }}
         </p>
@@ -44,6 +49,7 @@ useSeoMeta({
       <div class="border-t border-jp-border pt-12 md:pt-16">
         <ContentRenderer class="prose-jp" :value="article" />
       </div>
+      </template>
     </article>
   </div>
 </template>

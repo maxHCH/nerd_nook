@@ -1,6 +1,6 @@
 <template>
   <header class="site-header">
-    <div class="container-wide flex items-center justify-between">
+    <div class="mx-auto w-full max-w-4xl px-6 md:px-10 py-4 md:py-5 flex items-center justify-between">
       <NuxtLink to="/" class="site-logo">
         nerd nook
       </NuxtLink>

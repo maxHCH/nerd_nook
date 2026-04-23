@@ -20,6 +20,7 @@ useHead({
   --jp-text: #1a1a1a;
   --jp-muted: #888888;
   --jp-border: #e5e5e5;
+  --jp-accent: #b5844a;
 }
 
 html.dark {
@@ -28,6 +29,7 @@ html.dark {
   --jp-text: #e5e5e5;
   --jp-muted: #888888;
   --jp-border: #333333;
+  --jp-accent: #c49a5e;
 }
 
 html,

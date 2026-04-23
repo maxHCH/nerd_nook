@@ -3,8 +3,12 @@ node_modules
 dist
 .output
 .nuxt
+.data
 .env
+.env.local
+.env.*.local
 .idea/
 .pnpm-store
 .DS_Store
+package-lock.json
 public/assets/fonts

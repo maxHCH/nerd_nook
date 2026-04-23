@@ -36,6 +36,7 @@ export default defineConfig({
         muted: 'var(--jp-muted)',
         border: 'var(--jp-border)',
         link: 'var(--jp-text)',
+        accent: 'var(--jp-accent)',
       },
     },
   },

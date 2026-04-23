@@ -9,9 +9,9 @@ useSeoMeta({
   <div class="page">
     <main class="container">
       <header class="mb-12 md:mb-16">
-        <h1 class="title-lg">
+        <h2 class="title-lg">
           About
-        </h1>
+        </h2>
       </header>
 
       <article class="prose-jp">

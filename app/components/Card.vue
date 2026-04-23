@@ -72,7 +72,7 @@ const hasImage = computed(() => !!props.image)
       <p v-if="description" class="line-clamp-2 mt-2 text-sm text-jp-muted leading-relaxed">
         {{ description }}
       </p>
-      <span class="mt-3 inline-block rounded bg-jp-border px-2 py-0.5 text-xs text-jp-text">
+      <span v-if="tag" class="mt-3 inline-block border-l-2 pl-2 text-xs text-jp-muted tracking-widest uppercase" style="border-left-color: var(--jp-accent)">
         {{ tag }}
       </span>
     </div>

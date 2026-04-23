@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: articles, pending } = await useAsyncData('posts-list', () =>
-  queryCollection('posts').all())
+  queryCollection('posts').all(), { server: false })
 
 const sortedArticles = computed(() =>
   [...(articles.value ?? [])].sort((a, b) => b.date.localeCompare(a.date)),
@@ -24,15 +24,15 @@ useSeoMeta({
   <div class="page">
     <main class="container-wide">
       <header class="mb-12 md:mb-16">
-        <h1 class="title-lg">
+        <h2 class="text-4xl md:text-6xl font-serif leading-tight tracking-tight">
           Posts
-        </h1>
+        </h2>
         <p class="mt-4 text-sm text-jp-muted leading-relaxed tracking-wide">
           簡單記錄程式、生活與閱讀。
         </p>
       </header>
 
-      <div v-if="pending" class="meta">
+      <div v-if="pending || !articles" class="meta">
         Loading articles...
       </div>
 
@@ -49,7 +49,7 @@ useSeoMeta({
               class="group card"
             >
               <p class="mb-3 meta">
-                {{ article.date }}
+                {{ formatDate(article.date) }}
                 <span v-if="article.tag"> · {{ article.tag }}</span>
               </p>
               <h3 class="transition-colors duration-200 title-md group-hover:text-jp-muted">
@@ -77,7 +77,7 @@ useSeoMeta({
                 {{ article.title }}
               </h3>
               <span class="shrink-0 meta">
-                {{ article.date }}
+                {{ formatDate(article.date) }}
               </span>
             </NuxtLink>
           </div>
