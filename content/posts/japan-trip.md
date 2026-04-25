@@ -1,9 +1,10 @@
 ---
 title: 東京三日遊攻略
-description: 第一次去東京的行程規劃
-tag: 旅遊
-date: 2025-08-05
 cover: /hello/test01.jpg
+date: 2025-08-05
+description: 第一次去東京的行程規劃
+featured: false
+tag: 旅遊
 ---
 
 # 東京三日遊攻略
