@@ -71,6 +71,14 @@ export default defineNuxtConfig({
     },
   },
 
+  studio: {
+    repository: {
+      provider: 'github',
+      owner: 'maxHCH',
+      repo: 'nerd_nook',
+    },
+  },
+
   eslint: {
     config: {
       standalone: false,

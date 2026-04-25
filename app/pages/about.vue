@@ -20,16 +20,16 @@ useSeoMeta({
             關於這裡
           </h2>
           <p class="text-base text-jp-muted leading-8">
-            Nerd Nook 是一個簡單的個人空間，用來記錄程式、生活與閱讀。
+            Nerd Nook 是一個簡單的個人空間，用來記錄生活與閱讀。
           </p>
         </section>
 
         <section class="mb-16">
           <h2 class="mb-6 title-md">
-            關於我
+            關於我們
           </h2>
           <p class="text-base text-jp-muted leading-8">
-            一個喜歡寫程式和閱讀的人。
+            一個喜歡閱讀的人們。
           </p>
         </section>
 
@@ -40,9 +40,6 @@ useSeoMeta({
           <ul class="text-base text-jp-muted leading-8 space-y-3">
             <li>
               Email: hello@example.com
-            </li>
-            <li>
-              GitHub: @username
             </li>
           </ul>
         </section>
