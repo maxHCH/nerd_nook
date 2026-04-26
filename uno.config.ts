@@ -16,7 +16,7 @@ export default defineConfig({
     ['btn', 'px-4 py-1 rounded inline-block bg-jp-text text-white cursor-pointer hover:bg-jp-muted disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'],
     ['icon-btn', 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100'],
     ['page', 'min-h-screen bg-jp-bg text-jp-text'],
-    ['container', 'mx-auto w-full max-w-2xl px-6 py-20 md:px-8 md:py-28'],
+    ['container', 'mx-auto w-full max-w-4xl px-6 py-20 md:px-10 md:py-28'],
     ['container-wide', 'mx-auto w-full max-w-4xl px-6 py-20 md:px-10 md:py-28'],
     ['navlink', 'text-sm text-jp-muted tracking-wide transition-colors duration-200 hover:text-jp-text'],
     ['card', 'block border-b border-jp-border/60 py-8 transition-colors duration-200 hover:bg-jp-surface/50'],
