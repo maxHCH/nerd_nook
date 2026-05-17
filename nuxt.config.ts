@@ -75,6 +75,7 @@ export default defineNuxtConfig({
       provider: 'github',
       owner: 'maxHCH',
       repo: 'nerd_nook',
+      branch: 'develop',
     },
   },
 
