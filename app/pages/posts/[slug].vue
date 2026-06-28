@@ -33,22 +33,22 @@ watch(pending, (isPending) => {
       </div>
 
       <template v-else>
-      <header class="mb-16 mt-12 md:mb-20 md:mt-16">
-        <p class="mb-6 meta">
-          {{ formatDate(article.date) }}
-          <span v-if="article.tag"> · {{ article.tag }}</span>
-        </p>
-        <h2 class="title-xl">
-          {{ article.title }}
-        </h2>
-        <p v-if="article.description" class="mt-6 text-base text-jp-muted leading-8">
-          {{ article.description }}
-        </p>
-      </header>
+        <header class="mb-16 mt-12 md:mb-20 md:mt-16">
+          <p class="mb-6 meta">
+            {{ formatDate(article.date) }}
+            <span v-if="article.tag"> · {{ article.tag }}</span>
+          </p>
+          <h2 class="title-xl">
+            {{ article.title }}
+          </h2>
+          <p v-if="article.description" class="mt-6 text-base text-jp-muted leading-8">
+            {{ article.description }}
+          </p>
+        </header>
 
-      <div class="border-t border-jp-border pt-12 md:pt-16">
-        <ContentRenderer class="prose-jp" :value="article" />
-      </div>
+        <div class="border-t border-jp-border pt-12 md:pt-16">
+          <ContentRenderer class="prose-jp" :value="article" />
+        </div>
       </template>
     </article>
   </div>

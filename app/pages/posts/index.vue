@@ -24,7 +24,7 @@ useSeoMeta({
   <div class="page">
     <main class="container-wide">
       <header class="mb-12 md:mb-16">
-        <h2 class="text-4xl md:text-6xl font-serif leading-tight tracking-tight">
+        <h2 class="text-4xl leading-tight tracking-tight font-serif md:text-6xl">
           Posts
         </h2>
         <p class="mt-4 text-sm text-jp-muted leading-relaxed tracking-wide">
@@ -52,7 +52,7 @@ useSeoMeta({
                 {{ formatDate(article.date) }}
                 <span v-if="article.tag"> · {{ article.tag }}</span>
               </p>
-              <h3 class="transition-colors duration-200 title-md group-hover:text-jp-muted">
+              <h3 class="title-md transition-colors duration-200 group-hover:text-jp-muted">
                 {{ article.title }}
               </h3>
               <p v-if="article.description" class="mt-3 text-sm text-jp-muted leading-7">
@@ -71,7 +71,7 @@ useSeoMeta({
               v-for="article in otherArticles"
               :key="article.path"
               :to="article.path"
-              class="group flex items-baseline justify-between gap-6 card"
+              class="group card flex items-baseline justify-between gap-6"
             >
               <h3 class="text-base leading-relaxed transition-colors duration-200 group-hover:text-jp-muted">
                 {{ article.title }}

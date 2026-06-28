@@ -6,10 +6,10 @@ const scrolled = computed(() => y.value > 60)
 </script>
 
 <template>
-  <header :class="['site-header', { 'is-scrolled': scrolled }]">
-    <div class="mx-auto w-full max-w-4xl px-6 md:px-10 flex items-center justify-between">
+  <header class="site-header" :class="[{ 'is-scrolled': scrolled }]">
+    <div class="mx-auto max-w-4xl w-full flex items-center justify-between px-6 md:px-10">
       <NuxtLink to="/" class="site-logo">
-        <img src="/logo.png" alt="Nerd Nook" class="logo-img" />
+        <img src="/logo.png" alt="Nerd Nook" class="logo-img">
         nerd nook
       </NuxtLink>
       <nav class="flex items-center gap-6">
@@ -65,7 +65,9 @@ const scrolled = computed(() => y.value > 60)
   width: 68px;
   object-fit: contain;
   display: block;
-  transition: height 0.3s ease, width 0.3s ease;
+  transition:
+    height 0.3s ease,
+    width 0.3s ease;
 }
 
 .is-scrolled .logo-img {

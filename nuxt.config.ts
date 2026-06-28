@@ -44,10 +44,6 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
 
-  future: {
-    compatibilityVersion: 4,
-  },
-
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
     // but missing on offline, disabling extraction it until fixed
@@ -70,15 +66,6 @@ export default defineNuxtConfig({
     },
   },
 
-  studio: {
-    repository: {
-      provider: 'github',
-      owner: 'maxHCH',
-      repo: 'nerd_nook',
-      branch: 'develop',
-    },
-  },
-
   eslint: {
     config: {
       standalone: false,
@@ -89,4 +76,13 @@ export default defineNuxtConfig({
   },
 
   pwa,
+
+  studio: {
+    repository: {
+      provider: 'github',
+      owner: 'maxHCH',
+      repo: 'nerd_nook',
+      branch: 'develop',
+    },
+  },
 })

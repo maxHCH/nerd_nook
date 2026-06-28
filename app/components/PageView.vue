@@ -55,7 +55,7 @@ const otherArticles = computed(() => {
             {{ formatDate(heroArticle.date) }}
             <span v-if="heroArticle.tag"> · {{ heroArticle.tag }}</span>
           </p>
-          <h2 class="text-4xl md:text-6xl font-serif leading-tight tracking-tight transition-colors duration-200 group-hover:text-jp-muted">
+          <h2 class="text-4xl leading-tight tracking-tight font-serif transition-colors duration-200 md:text-6xl group-hover:text-jp-muted">
             {{ heroArticle.title }}
           </h2>
           <p v-if="heroArticle.description" class="mt-4 max-w-xl text-base text-jp-muted leading-8">
@@ -80,7 +80,7 @@ const otherArticles = computed(() => {
               {{ formatDate(post.date) }}
               <span v-if="post.tag"> · {{ post.tag }}</span>
             </p>
-            <h3 class="transition-colors duration-200 title-md group-hover:text-jp-muted">
+            <h3 class="title-md transition-colors duration-200 group-hover:text-jp-muted">
               {{ post.title }}
             </h3>
             <p v-if="post.description" class="mt-3 text-sm text-jp-muted leading-7">
