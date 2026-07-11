@@ -27,16 +27,16 @@ pnpm typecheck    # TypeScript check
 
 ## Content
 
-Posts live in `content/posts/*.md`. Required frontmatter:
+Posts live in `content/posts/*.md`. Only `title` and `date` are required; the rest are optional:
 
 ```yaml
 ---
-title: Post Title
-date: 2026-01-01
+title: Post Title           # required
+date: 2026-01-01            # required (YYYY-MM-DD)
 description: Short description
 cover: /images/posts/my-post/cover.jpg
-tag: [life, dev]
-featured: true
+tag: life                   # single string, not an array
+featured: true             # true → shown in the Featured section
 ---
 ```
 
